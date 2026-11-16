@@ -88,7 +88,7 @@ public class V2 extends JFrame
                         public void mouseReleased(MouseEvent e) {
                             if (SwingUtilities.isRightMouseButton(e)) {
                                 Tile t = button[row][col];
-                                if (t.isLooked() == false && NumSeenTile > 0) {              // can't flag an opened tile
+                                if (t.isLooked() == false && NumSeenTile > 0 && !loss) {          
                                     if (button[row][col].isflag() == true) {
                                         t.setFlag(false);
                                         t.isflag();
